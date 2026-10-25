@@ -1,0 +1,358 @@
+{
+  "version": "2026-10-22-withhold-v1",
+  "source": "https://moody-challenge.physionet.org/2019/",
+  "scope": "Source units and definitional domains, not universal normal ranges. Uploaded units are assumed to match source labels, never automatically converted.",
+  "missing_conventions": [
+    "blank",
+    "NaN",
+    "NA",
+    "N/A",
+    "null (pandas CSV missing tokens)"
+  ],
+  "sentinel_policy": "No arbitrary numeric sentinel, including zero or -999, is silently treated as missing.",
+  "statistical_warning_abs_z": 8,
+  "variables": {
+    "HR": {
+      "unit": "beats/min",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "O2Sat": {
+      "unit": "%",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": 100.0,
+      "domain_rationale": "A fraction expressed as a percentage is bounded from 0 to 100.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Temp": {
+      "unit": "deg C",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": -273.15,
+      "maximum": null,
+      "domain_rationale": "Absolute-zero lower bound expressed in the source Celsius convention; not a clinical plausibility range.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation.",
+      "unit_note": "Official source expects degrees Celsius. A user CSV does not establish its temperature unit; no Fahrenheit conversion or clinical thresholds are applied automatically."
+    },
+    "SBP": {
+      "unit": "mmHg",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": null,
+      "maximum": null,
+      "domain_rationale": "No universal hard mathematical bound configured; BaseExcess is signed, pH is logarithmic, and gauge blood pressures are context-dependent.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "MAP": {
+      "unit": "mmHg",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": null,
+      "maximum": null,
+      "domain_rationale": "No universal hard mathematical bound configured; BaseExcess is signed, pH is logarithmic, and gauge blood pressures are context-dependent.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "DBP": {
+      "unit": "mmHg",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": null,
+      "maximum": null,
+      "domain_rationale": "No universal hard mathematical bound configured; BaseExcess is signed, pH is logarithmic, and gauge blood pressures are context-dependent.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Resp": {
+      "unit": "breaths/min",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "EtCO2": {
+      "unit": "mmHg",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "BaseExcess": {
+      "unit": "mmol/L",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": null,
+      "maximum": null,
+      "domain_rationale": "No universal hard mathematical bound configured; BaseExcess is signed, pH is logarithmic, and gauge blood pressures are context-dependent.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "HCO3": {
+      "unit": "mmol/L",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "FiO2": {
+      "unit": "source scale: fraction/% unresolved",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation.",
+      "unit_note": "Official description labels percent; frozen training mean is about 0.568. Fraction/percent ambiguity is unresolved. Do not convert automatically or impose an upper bound of 1."
+    },
+    "pH": {
+      "unit": "dimensionless",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": null,
+      "maximum": null,
+      "domain_rationale": "No universal hard mathematical bound configured; BaseExcess is signed, pH is logarithmic, and gauge blood pressures are context-dependent.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "PaCO2": {
+      "unit": "mmHg",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "SaO2": {
+      "unit": "%",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": 100.0,
+      "domain_rationale": "A fraction expressed as a percentage is bounded from 0 to 100.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "AST": {
+      "unit": "IU/L",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "BUN": {
+      "unit": "mg/dL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Alkalinephos": {
+      "unit": "IU/L",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Calcium": {
+      "unit": "mg/dL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Chloride": {
+      "unit": "mmol/L",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Creatinine": {
+      "unit": "mg/dL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Bilirubin_direct": {
+      "unit": "mg/dL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Glucose": {
+      "unit": "mg/dL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Lactate": {
+      "unit": "mg/dL (source label)",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Magnesium": {
+      "unit": "mmol/dL (source label)",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Phosphate": {
+      "unit": "mg/dL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Potassium": {
+      "unit": "mmol/L",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Bilirubin_total": {
+      "unit": "mg/dL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "TroponinI": {
+      "unit": "ng/mL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Hct": {
+      "unit": "%",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": 100.0,
+      "domain_rationale": "A fraction expressed as a percentage is bounded from 0 to 100.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Hgb": {
+      "unit": "g/dL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "PTT": {
+      "unit": "seconds",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "WBC": {
+      "unit": "10^3/uL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Fibrinogen": {
+      "unit": "mg/dL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    },
+    "Platelets": {
+      "unit": "10^3/uL",
+      "unit_verified_for_arbitrary_uploads": false,
+      "minimum": 0.0,
+      "maximum": null,
+      "domain_rationale": "Nonnegative concentration, count, activity, duration, rate or absolute gas partial pressure.",
+      "physiological_warning_thresholds": null,
+      "warning_note": "No invented universal clinical reference interval. Frozen-training |z|>8 is a separate statistical-shift warning only.",
+      "missing": "Standard CSV blank/NaN; zero remains an observation."
+    }
+  }
+}

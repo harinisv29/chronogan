@@ -1,0 +1,14 @@
+seed: 42
+sequence_length: 24
+hidden: 32
+noise: 8
+batch_size: 16
+epochs: 2
+patience: 2
+learning_rate: 0.001
+hide_rate: 0.2
+adversarial: 0.1
+reconstruction: 10.0
+temporal: 0.01
+plausibility: 0.001
+max_patients: 200

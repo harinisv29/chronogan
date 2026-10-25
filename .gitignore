@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.packages/
+.cuda-packages/
+.gpu-download/
+.runtime/
+.pip-cache/
+runs/
+data/
+results/
+checkpoints/
+models/*.pt
